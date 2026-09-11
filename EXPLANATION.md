@@ -1,0 +1,35 @@
+# Short Explanation
+
+**Activity 2: Website for a Local Business**
+
+## 1. Why did you choose this business?
+
+I chose [BUSINESS NAME] because it is a small coffee shop that already has regular customers but only reaches them through a Facebook page. A cafe is also a good fit for a five-page site: it has a clear story, a menu that maps neatly onto a products page, and plenty of things worth photographing. Posts on a Facebook page get buried within a day, while a menu sitting on its own page stays where people can find it.
+
+## 2. Who is the target audience of the website?
+
+Mainly students and young workers in Iloilo City who are looking for a place to study, work or sit with friends. The second group is anyone checking the shop's hours, address or prices before deciding to go, including visitors who do not use Facebook. The writing is kept plain and the prices are shown openly because both groups are mostly deciding whether it is worth the trip.
+
+## 3. What design choices did you make?
+
+The colours are taken from the drink itself: espresso brown for the navigation and footer, tan for every border, and a cream page background so long stretches of text stay easy to read. Gold is used only for buttons and the active link, so the eye is pulled to the one thing it should click.
+
+The layout follows the same pattern on every page: a fixed navigation bar, a page title, then content inside bordered cards. Using one card style for everything meant less new CSS per page and a site that feels like one piece rather than five separate exercises.
+
+For type I paired a pixel display font for headings with a rounded sans-serif for body text. The pixel font gives the site a bit of character without making paragraphs hard to read, since it never touches the body copy.
+
+The home page uses a sidebar for hours, the daily brew and the address. Those are the three things people check most often, so they sit beside the main text instead of at the bottom of the page.
+
+## 4. What problems does your website solve for the business?
+
+Right now a customer who wants the shop's hours or prices has to scroll through a Facebook feed and hope the information was posted recently. The website puts the address, hours, full menu and contact details on fixed pages that do not move. The gallery gives the shop somewhere to show what it looks like inside, which matters when people are choosing a place to sit for two hours. The contact form also gives the shop a tidier way to take reservations and inquiries than replying to comments one at a time.
+
+## 5. What part of the website are you most proud of?
+
+The home page. Getting the hero photo to fade into the page background with a CSS gradient, instead of ending in a hard line, made the whole page look considered. I am also happy with the card frame, which is just a thick border plus an inset outline and a hard shadow, yet it reads as a proper panel and is reused on every page without any extra images.
+
+## 6. What part did you find most difficult?
+
+The contact form. Making fourteen different input types line up neatly took far longer than expected, because inputs do not inherit the page font and each type styles differently. Grouping them into fieldsets with legends and giving every control its own label was what finally made it readable.
+
+The responsive layout was the other difficult part. The navigation bar could not hold the shop name and five links on a phone, so below 700px the name is hidden and the links scroll sideways instead. The home sidebar also had to drop below the main column rather than beside it.
