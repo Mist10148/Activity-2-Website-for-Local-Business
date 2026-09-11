@@ -445,3 +445,43 @@ img {
     font-size: 0.85rem;
     text-align: center;
 }
+
+/* INNER PAGES */
+
+.page-title {
+    margin-top: 2.5rem;
+}
+
+.page-layout {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+}
+
+/* the About photo sits beside the text and the paragraphs wrap around it */
+.about-figure {
+    float: right;
+    width: 20rem;
+    margin: 0 0 1rem 1.5rem;
+}
+
+.about-figure img {
+    width: 100%;
+    border: 5px solid var(--tan);
+    border-radius: 10px;
+    display: block;
+}
+
+.about-figure figcaption {
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* the float has to be cleared or the card shrinks around the text only */
+.section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
