@@ -184,3 +184,211 @@ img {
     height: 3px;
     background-color: var(--gold);
 }
+
+/* HERO */
+
+.hero {
+    position: relative;
+    height: 32rem;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+
+    /* cover keeps the photo filled in without squashing it */
+    object-fit: cover;
+    display: block;
+}
+
+/* melts the bottom of the photo into the cream page color */
+.fade-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(to bottom, rgba(245, 233, 215, 0), var(--cream));
+}
+
+/* sits on top of the photo, centered both ways */
+.hero-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 40rem;
+    text-align: center;
+}
+
+.hero-title {
+    color: var(--cream);
+    font-size: 2rem;
+    margin: 0 0 1rem;
+
+    /* hard pixel shadow so the letters stay readable over any photo */
+    text-shadow: 4px 4px 0 rgba(43, 27, 18, 0.75);
+}
+
+.hero-tagline {
+    color: var(--cream);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 0 rgba(43, 27, 18, 0.7);
+}
+
+/* CONTENT CARDS */
+
+/* the frame is plain CSS: thick border outside, thin cream line inside */
+.section {
+    background-color: var(--card);
+    border: 6px solid var(--tan);
+    border-radius: 12px;
+    outline: 3px solid var(--card);
+    outline-offset: -10px;
+    box-shadow: 0 6px 0 rgba(43, 27, 18, 0.25);
+    padding: 1.5rem 2rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.divider {
+    border: none;
+    border-top: 4px dashed var(--berry);
+    margin: 2.5rem 0;
+}
+
+/* pixel squares instead of round bullets */
+.pixel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.pixel-list li {
+    position: relative;
+    padding-left: 1.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.pixel-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65rem;
+    width: 9px;
+    height: 9px;
+    background-color: var(--coffee);
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: var(--roast);
+    background-color: var(--gold);
+    border: 4px solid var(--tan);
+    border-radius: 10px;
+    padding: 0.85rem 1.3rem;
+    text-decoration: none;
+    box-shadow: 0 4px 0 rgba(43, 27, 18, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--gold-hi);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 rgba(43, 27, 18, 0.3);
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--coffee);
+    outline-offset: 2px;
+}
+
+.btn-small {
+    font-size: 0.6rem;
+    padding: 0.6rem 0.9rem;
+}
+
+/* HOME LAYOUT */
+
+/* main column and sidebar side by side, sidebar stays a fixed width */
+.home-layout {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 3rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.home-main {
+    flex: 1 1 auto;
+
+    /* without this the long text refuses to shrink and pushes the sidebar out */
+    min-width: 0;
+}
+
+.intro-img {
+    /* floated so the paragraphs wrap around the photo */
+    float: right;
+    width: 18rem;
+    margin: 0 0 1rem 1.5rem;
+    border: 5px solid var(--tan);
+    border-radius: 10px;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    flex: 0 0 18rem;
+}
+
+.side-box {
+    background-color: var(--card-alt);
+    border: 5px solid var(--tan);
+    border-radius: 12px;
+    box-shadow: 0 5px 0 rgba(43, 27, 18, 0.2);
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.hours-table th,
+.hours-table td {
+    padding: 0.45rem 0.3rem;
+    border-bottom: 2px solid var(--muted);
+    text-align: left;
+}
+
+.hours-table th {
+    color: var(--roast);
+}
+
+.hours-table td {
+    text-align: right;
+}
+
+.side-note {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+}
+
+.side-price {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: var(--berry);
+    margin: 0;
+}
