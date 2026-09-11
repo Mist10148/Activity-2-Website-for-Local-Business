@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - [BUSINESS NAME]</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- shared header -- keep the same in every page, only the active link moves -->
+    <header class="site-nav">
+        <nav class="navbar" aria-label="Main">
+            <a class="brand" href="index.html">
+                <img src="images/logo.png" alt="[BUSINESS NAME] logo">
+                <span>[BUSINESS NAME]</span>
+            </a>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" class="active">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- /shared header -->
+
+    <h1 class="page-title">MENU</h1>
+
+    <main id="main" class="page-layout">
+        <section class="section">
+            <h2>What We Serve</h2>
+            <p>
+                Everything below is made to order at the counter. Prices are in pesos and
+                already include the cup, the seat and however long you decide to stay.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Coffee and Drinks</h2>
+
+            <!-- each item is an article because it makes sense on its own -->
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <img src="images/menu-espresso.jpg" alt="A double shot of espresso">
+                    <h3>Double Espresso</h3>
+                    <p>Two shots of our house blend, thick and a little sweet. The one the baristas drink.</p>
+                    <p class="price">P90</p>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/menu-latte.jpg" alt="A latte with poured art on top">
+                    <h3>Cafe Latte</h3>
+                    <p>Espresso with steamed fresh milk. Ask for it with muscovado if you like it sweeter.</p>
+                    <p class="price">P130</p>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/menu-coldbrew.jpg" alt="A glass of cold brew coffee over ice">
+                    <h3>Cold Brew</h3>
+                    <p>Steeped for eighteen hours, never heated. Smooth enough to drink without sugar.</p>
+                    <p class="price">P140</p>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/menu-frappe.jpg" alt="A blended coffee frappe with cream">
+                    <h3>Mocha Frappe</h3>
+                    <p>Blended coffee, local cacao and milk, finished with a spoon of cream on top.</p>
+                    <p class="price">P160</p>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/menu-pastry.jpg" alt="Freshly baked pastries on a tray">
+                    <h3>Morning Pastries</h3>
+                    <p>Butter croissants, cinnamon rolls and pan de coco, baked here before we open.</p>
+                    <p class="price">P60 - P95</p>
+                </article>
+
+                <article class="menu-card">
+                    <img src="images/menu-meal.jpg" alt="A rice meal served on a plate">
+                    <h3>Rice Meals</h3>
+                    <p>Silog plates and a daily ulam, served all day for anyone staying through lunch.</p>
+                    <p class="price">P150</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Full Price List</h2>
+
+            <table class="price-table">
+                <caption>Add-ons are charged separately. Prices last updated September 2026.</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Regular</th>
+                        <th scope="col">Large</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Double Espresso</td>
+                        <td>P90</td>
+                        <td>P110</td>
+                    </tr>
+                    <tr>
+                        <td>Cafe Latte</td>
+                        <td>P130</td>
+                        <td>P150</td>
+                    </tr>
+                    <tr>
+                        <td>Cold Brew</td>
+                        <td>P140</td>
+                        <td>P165</td>
+                    </tr>
+                    <tr>
+                        <td>Mocha Frappe</td>
+                        <td>P160</td>
+                        <td>P185</td>
+                    </tr>
+                    <tr>
+                        <td>Morning Pastries</td>
+                        <td>P60</td>
+                        <td>P95</td>
+                    </tr>
+                    <tr>
+                        <td>Rice Meals</td>
+                        <td>P150</td>
+                        <td>P180</td>
+                    </tr>
+                    <tr>
+                        <td>Extra shot or syrup</td>
+                        <td>P25</td>
+                        <td>P25</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a class="btn" href="gallery.html">See the shop</a>
+        </section>
+    </main>
+
+    <!-- shared footer -- keep the same in every page -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h3>[BUSINESS NAME]</h3>
+                <p>[STREET ADDRESS]<br>[BARANGAY], Iloilo City</p>
+                <p>[CONTACT NUMBER]</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Pages</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <ul class="footer-links">
+                    <li><a href="[FACEBOOK PAGE LINK]">Facebook</a></li>
+                    <li><a href="[INSTAGRAM LINK]">Instagram</a></li>
+                    <li><a href="[GOOGLE MAPS LINK]">Google Maps</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer-note">&copy; 2026 [BUSINESS NAME]. Student project for Web Development and Web Design.</p>
+    </footer>
+    <!-- /shared footer -->
+</body>
+</html>
