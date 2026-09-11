@@ -485,3 +485,81 @@ img {
     display: block;
     clear: both;
 }
+
+/* MENU CARDS */
+
+/* auto-fit lets the column count follow the width, so no extra breakpoint */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu-card {
+    background-color: var(--card-alt);
+    border: 5px solid var(--tan);
+    border-radius: 10px;
+    box-shadow: 0 5px 0 rgba(43, 27, 18, 0.2);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* a fixed height plus cover keeps every card the same size, whatever the photo */
+.menu-card img {
+    width: 100%;
+    height: 11rem;
+    object-fit: cover;
+    border: 4px solid var(--tan);
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 0.9rem;
+}
+
+.menu-card p {
+    font-size: 0.95rem;
+}
+
+.price {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    color: var(--berry);
+    margin: 0;
+}
+
+/* PRICE TABLE */
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.price-table caption {
+    caption-side: bottom;
+    font-size: 0.85rem;
+    font-style: italic;
+    padding-top: 0.7rem;
+}
+
+.price-table th,
+.price-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 2px solid var(--muted);
+    text-align: left;
+}
+
+.price-table thead th {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.65rem;
+    color: var(--cream);
+    background-color: var(--coffee);
+}
+
+/* striped rows so the eye can follow a price across the row */
+.price-table tbody tr:nth-child(even) {
+    background-color: var(--card-alt);
+}
+
+.price-table tbody tr:hover {
+    background-color: var(--gold-hi);
+}
