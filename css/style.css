@@ -745,6 +745,11 @@ img {
 }
 
 @media (max-width: 700px) {
+    /* the stacked nav is taller, so the body padding has to grow with it */
+    :root {
+        --nav-h: 6rem;
+    }
+
     /* the brand name and five links cannot share one row any more */
     .navbar {
         flex-direction: column;
