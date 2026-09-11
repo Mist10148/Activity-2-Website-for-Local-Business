@@ -94,3 +94,93 @@ img {
     top: 1rem;
     z-index: 3;
 }
+
+/* NAV BAR */
+
+/* fixed at the top, so the body carries a padding-top of the same height */
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-h);
+    background-color: var(--espresso);
+    border-bottom: 4px solid var(--tan);
+    box-shadow: 0 4px 12px rgba(43, 27, 18, 0.35);
+    z-index: 2;
+}
+
+.navbar {
+    max-width: 75rem;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.brand img {
+    width: 40px;
+    height: 40px;
+
+    /* keeps a small pixel logo crisp instead of blurry */
+    image-rendering: pixelated;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* inline-block so the padding can build a bigger tap target */
+.menu a {
+    display: inline-block;
+    padding: 0.6rem 0.9rem;
+    font-weight: 700;
+    color: var(--cream);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.menu a:hover {
+    color: var(--gold-hi);
+    background-color: rgba(245, 233, 215, 0.12);
+}
+
+.menu a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* the page you are on gets a gold underline drawn under the link */
+.menu a.active {
+    color: var(--gold);
+    position: relative;
+}
+
+.menu a.active::after {
+    content: "";
+    position: absolute;
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: 0.25rem;
+    height: 3px;
+    background-color: var(--gold);
+}
