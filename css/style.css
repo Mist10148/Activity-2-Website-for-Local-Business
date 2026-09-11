@@ -1,0 +1,96 @@
+/* Coffee shop website -- one stylesheet for all five pages.
+   Order: reset, colors, base text, nav, home, cards, menu,
+   gallery, form, footer, then the media queries at the end. */
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+}
+
+/* COLORS */
+
+:root {
+    --espresso: #2B1B12;
+    --roast: #4A2C18;
+    --coffee: #6F4E37;
+    --tan: #A9744F;
+    --cream: #F5E9D7;
+    --card: #FFF6E5;
+    --card-alt: #FBEFD9;
+    --gold: #E8B75D;
+    --gold-hi: #F5CC7A;
+    --berry: #B5533C;
+    --ink: #3A2B22;
+    --muted: #D9C3A5;
+
+    /* the nav is fixed, so its height is needed again for the body padding */
+    --nav-h: 4.5rem;
+}
+
+/* BASE TEXT */
+
+body {
+    margin: 0;
+    padding-top: var(--nav-h);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink);
+
+    /* cream page with a faint dot pattern so it is not a flat block of color */
+    background-color: var(--cream);
+    background-image: radial-gradient(var(--muted) 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--roast);
+
+    /* the pixel font has no descender room, so it needs a taller line */
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 3rem 0 2rem;
+}
+
+h2 {
+    font-size: 1.05rem;
+    margin: 0.5rem 0 1.25rem;
+}
+
+h3 {
+    font-size: 0.85rem;
+    margin: 0 0 0.75rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--coffee);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* skip link, hidden offscreen until it is focused with the keyboard */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    background-color: var(--card);
+    color: var(--roast);
+    padding: 0.6rem 1rem;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    z-index: 3;
+}
