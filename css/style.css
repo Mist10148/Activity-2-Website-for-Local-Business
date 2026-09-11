@@ -715,3 +715,78 @@ img {
 .btn-reset:hover {
     background-color: var(--muted);
 }
+
+/* SMALLER SCREENS */
+
+@media (max-width: 900px) {
+    /* the sidebar no longer fits beside the text, so it drops underneath */
+    .home-layout {
+        display: block;
+    }
+
+    .sidebar {
+        margin-top: 2rem;
+    }
+
+    .side-box {
+        /* full width looks empty once stacked, so they sit side by side instead */
+        display: inline-block;
+        width: 100%;
+        max-width: 22rem;
+        vertical-align: top;
+    }
+
+    .about-figure,
+    .intro-img {
+        float: none;
+        width: 100%;
+        margin: 0 0 1.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    /* the brand name and five links cannot share one row any more */
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.2rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .brand span {
+        display: none;
+    }
+
+    /* the links scroll sideways rather than spilling out of the bar */
+    .menu {
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .menu a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .hero {
+        height: 24rem;
+    }
+
+    .hero-title {
+        font-size: 1.3rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 1.2rem 1.2rem 1.5rem;
+    }
+}
